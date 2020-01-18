@@ -1,0 +1,32 @@
+*{
+font-family: 'Ubuntu', sans-serif;
+
+}
+.back_img
+{
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 85vh;
+	background-size: cover;
+
+}
+.fonts{
+	font-size: 24px;
+	color: #D3F5F6;
+}
+
+
+@media screen and (max-width:600px) {
+.center{
+	margin-top: 40% !important;
+	text-align: center !important;
+}
+.wfont{
+	font-size: 20px !important; 
+}
+.fonts{
+	font-size: 18px !important; 
+
+}
+	
+}
