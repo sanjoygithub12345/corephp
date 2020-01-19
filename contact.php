@@ -7,4 +7,4 @@
 
                   <input type="submit" name="submit" value="send" class="btn btn-primary mt-3">
 	   			</form>
-	   		</div>
+</div>
