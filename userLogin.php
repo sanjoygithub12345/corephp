@@ -1,11 +1,33 @@
 <?php
   include('dbconection.php');
+  session_start();
+  if(!isset($_SESSION['login'])){
   if(isset($_POST['login']))
   {
   	$email=$_POST['email'];
   	$password=$_POST['password'];
+  	$sql = "SELECT email,password FROM signup WHERE email='" .$email."' AND password = '" .$password."'";
+  	$res=mysqli_query($db,$sql);
+  	$result=mysqli_num_rows($res);
+  	if($result ==1)
+  	{
+  		$_SESSION['login']=true;
+  		$_SESSION['email']=$email;
+  		
+  	}
+  	else
+  	{
+  		$msg ='<div class="alert alert-danger">login faield</div>';
+  	}
   }
- ?>
+}
+else
+{
+       $msg ='<div class="alert alert-success">you are login</div>';
+  	     header('location:userProfile.php');
+ 
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -26,6 +48,14 @@
 		<div class="row justify-content-center">
 			<div class="col-md-4  col-sm-6">
 				<h3 class="text-primary text-center">online service management system</h3>
+				
+				  <?php
+				  if(isset($msg))
+				  {
+				  	echo $msg;
+				  }
+				   ?>
+				
 				<form method="post">
 					<div class="form-group">
 					<i class="fas fa-envelope-square"></i>
