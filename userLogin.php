@@ -1,3 +1,12 @@
+<?php
+  include('dbconection.php');
+  if(isset($_POST['login']))
+  {
+  	$email=$_POST['email'];
+  	$password=$_POST['password'];
+  }
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,22 +23,26 @@
 </head>
 <body>
 	<div class="container mt-5">
-		<div class="row">
-			<div class="col-md-6 offset-md-3">
+		<div class="row justify-content-center">
+			<div class="col-md-4  col-sm-6">
 				<h3 class="text-primary text-center">online service management system</h3>
 				<form method="post">
 					<div class="form-group">
-					 <i class="fas fa-user"></i>
+					<i class="fas fa-envelope-square"></i>
 					 <label>Email</label>	
 					 <input type="email" name="email" class="form-control">
 					</div>
 					<div class="form-group">
-					<i class="fas fa-envelope-square"></i>
+					<i class="fas fa-key"></i>
+
 					 <label>password</label>
 					 <input type="password" name="password" class="form-control">
 					</div>
-					<button class="btn btn-primary">login</button>
+					<button class="btn btn-primary btn-block mt-2" name="login">login</button>
 				</form>
+				<div>
+					<a href="index.php" class="text-center nav-link">back to home</a>
+				</div>
 			</div>
 		</div>
 	</div>
