@@ -1,5 +1,5 @@
 <?php
-  include('dbconection.php');
+  include('../dbconection.php');
   session_start();
   if(!isset($_SESSION['login'])){
   if(isset($_POST['login']))
@@ -37,11 +37,11 @@ else
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- bootstrap css -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<!-- custom css -->
-	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="../css/custom.css">
 	 <!-- fontawsome -->
-	 <link rel="stylesheet" type="text/css" href="css/all.min.css">
+	 <link rel="stylesheet" type="text/css" href="../css/all.min.css">
 </head>
 <body>
 	<div class="container mt-5">
@@ -76,8 +76,8 @@ else
 			</div>
 		</div>
 	</div>
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/all.min.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/all.min.js"></script>
 </body>
 </html>

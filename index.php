@@ -45,7 +45,7 @@
 		<div class="center mt-4">
 			<h3 class="text-danger text-uppercase font-weight-bold wfont">welcome to osms </h3>
 			<p class="font-italic fonts"> customer hapiness our aim</p>
-			<a href="userLogin.php" class="btn btn-primary mr-4">login</a>
+			<a href="user/userLogin.php" class="btn btn-primary mr-4">login</a>
 			<a href="#registration" class="btn btn-success mr-4">singnup</a>
 
 		</div>
@@ -80,7 +80,7 @@
 	</div>
 
 	<!-- registration form -->
-	    <?php include('userRegistration.php'); ?>
+	    <?php include('user/userRegistration.php'); ?>
 	<!-- start happy coustomer -->
 	<div class="container mt-4">
 		<div class="jumbotron bg-danger">
