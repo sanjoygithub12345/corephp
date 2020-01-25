@@ -1,6 +1,7 @@
 *{
 font-family: 'Ubuntu', sans-serif;
 
+
 }
 .back_img
 {
@@ -14,6 +15,11 @@ font-family: 'Ubuntu', sans-serif;
 	font-size: 24px;
 	color: #D3F5F6;
 }
+.act{
+	background-color:#71a95a;
+	color: #ffbbb4;
+}
+
 
 
 @media screen and (max-width:600px) {

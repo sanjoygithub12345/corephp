@@ -1,7 +1,23 @@
 <?php 
+define('TITLE', 'user || checkStatus' );
+define('PAGE', 'userServiceStatus' );
+session_start();
 include('include/header.php');
+ if(isset($_SESSION['login']))
+  {
+
+  }
+  else
+  {
+  	header('location:userLogin.php');
+  }
+
  ?>
-  check status
+  
+ 
+ 
+ 
+
  <?php
 include('include/footer.php');
 

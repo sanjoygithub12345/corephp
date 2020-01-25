@@ -6,7 +6,7 @@
   {
   	$email=$_POST['email'];
   	$password=$_POST['password'];
-  	$sql = "SELECT email,password FROM signup WHERE email='" .$email."' AND password = '" .$password."'";
+  	$sql = "SELECT email,password FROM admin_login WHERE email='" .$email."' AND password = '" .$password."'";
   	$res=mysqli_query($db,$sql);
   	$result=mysqli_num_rows($res);
   	if($result ==1)
@@ -24,7 +24,7 @@
 else
 {
        // $msg ='<div class="alert alert-success">you are login</div>';
-  	     header('location:userProfile.php');
+  	     header('location:dasboard.php');
  
 }
 ?>
@@ -71,7 +71,7 @@ else
 					<button class="btn btn-primary btn-block mt-2" name="login">login</button>
 				</form>
 				<div>
-					<a href="../index.php" class="text-center nav-link">back to home</a>
+					
 				</div>
 			</div>
 		</div>

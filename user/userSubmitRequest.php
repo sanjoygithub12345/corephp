@@ -1,7 +1,70 @@
 <?php 
+define('TITLE', 'user || submitRequest' );
+define('PAGE', 'userSubmitRequest' );
+
+
 include('include/header.php');
+include('../dbconection.php');
+
+session_start();
+if($_SESSION['login'])
+{
+   $email=$_SESSION['email'];
+}
+else
+{
+	header('location:userLogin.php');
+}
+if(isset($_POST['submit'])){
+	$requset_info=$_POST['request'];
+	$description=$_POST['description'];
+	$name=$_POST['name'];
+	$address_line_one=$_POST['address'];
+	$address_line_two=$_POST['addressone'];
+	$city=$_POST['city'];
+	$state=$_POST['state'];
+	$zip=$_POST['zip'];
+	$email=$_POST['email'];
+	$phnumber=$_POST['number'];
+	$date=$_POST['date'];
+
+
+	 if($requset_info=="" || $description=="" || $name=="" || $address_line_one=="" || $address_line_two=="" || $city=="" || $state=="" || $zip=="" || $email=="" || $phnumber=="" || $date=="" )
+	 {
+	 	 $msg='<div class="alert alert-danger w-25">all field are required</div>' ;
+	 }
+	 elseif(preg_match('/[^0-9]/', $zip))
+	 {
+	 	$msgg = '<p class="alert alert-danger ">only number </p>';
+	 }
+	  elseif(preg_match('/[^0-9]/', $phnumber))
+	 {
+	 	$msgg = '<p class="alert alert-danger ">only number </p>';
+	 	
+	 }
+	 else
+	 {
+	 	$sql="INSERT INTO userrequest (requestinfo,description,name,addressone,addresstwo,city,state,zip,email,mobile,datee) VALUES ('$requset_info','$description','$name','$address_line_one','$address_line_two','$city','$state','$zip','$email','$phnumber','$date') ";
+	 	$res=mysqli_query($db,$sql);
+	 	$gid=mysqli_insert_id($db);
+	 	$_SESSION['getid']=$gid;
+	 	if($res)
+	 	{
+	 		header('location:userRecive.php');
+	 	}
+	 }
+}
+
  ?>
- <form>
+
+  <?php
+ if(isset($msg))
+ {
+ 	echo $msg;
+ }
+  ?>
+
+ <form method="post">
  	<div class="form-group">
  		 <label>requset info</label>
  		 <input type="text" name="request" class="form-control form-control-sm">
@@ -24,7 +87,7 @@ include('include/header.php');
  		<div class="col-md-6">
  			<div class="form-group">
  			<label>address line 2</label>
- 			<input type="text" name="address1" class="form-control-sm form-control">
+ 			<input type="text" name="addressone" class="form-control-sm form-control">
  			</div>
  		</div>
  	</div>
@@ -42,6 +105,13 @@ include('include/header.php');
  			</div>
  		</div>
  		<div class="col-md-2">
+ 			<?php
+ 			if(isset($msgg))
+ 			{
+              echo $msgg;
+ 			}
+ 			 ?>
+
  			<div class="form-group">
  				<label>Zip</label>
  				<input type="text" class="form-control-sm form-control" name="zip">
@@ -57,9 +127,15 @@ include('include/header.php');
  			</div>
  		</div>
  		<div class="col-md-4">
+ 			<?php
+ 			if( isset($msgg))
+ 			{
+              echo $msgg;
+ 			}
+ 			 ?>
  			<div class="form-group">
  				<label>mobile</label>
- 				<input type="text" class="form-control-sm form-control" name="state">
+ 				<input type="text" class="form-control-sm form-control" name="number">
  			</div>
  		</div>
  		<div class="col-md-2">
@@ -70,9 +146,10 @@ include('include/header.php');
  		</div>
 
  	</div>
- 	<input type="submit" value="submit" name="submit" class="btn btn-primary mt-3">
+ 	<input type="submit" value="submit" name="submit" class="btn btn-primary mt-3 mb-3">
 
  </form>
+ 
  <?php
 include('include/footer.php');
 

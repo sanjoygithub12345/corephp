@@ -1,4 +1,8 @@
 <?php 
+define('TITLE', 'user || userRegistration' );
+define('PAGE', 'userRegistration' );
+
+
 include("dbconection.php");
 if(isset($_POST['submit']))
 {

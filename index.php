@@ -140,6 +140,7 @@
           		 <p class="my-3" >follow us</p>
           	</div>
           	<div class="col-md-6 text-white py-3 text-center">
+          		<a href="admin/adminUserLogin.php">admin</a>
           		<span><i class="fab fa-facebook m-1 fa-2x "></i></span>
           		<span><i class="fab fa-twitter m-1 fa-2x "></i></span>
           		<span><i class="fab fa-instagram  m-1 fa-2x "></i></span>
