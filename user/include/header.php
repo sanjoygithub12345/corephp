@@ -25,7 +25,7 @@
 <!-- side navbar -->
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-sm-12 text-center col-md-2 text-md-left text-sm-center sidebar bg-light pl-3 sidebar-stiky mt-2 text-center">
+		<div class="col-sm-2 text-center col-md-2 text-md-left text-sm-center sidebar bg-light pl-3 sidebar-stiky mt-2 text-center">
 			<ul class="navbar-nav flex-column  ">
 				<li class="nav-item "><a href="userProfile.php" class="nav-link mr-2  pl-2 <?php if(PAGE=='userProfile'){echo 'act';} ?>"><i class="fas fa-user mr-2"></i>profile</a>
 				</li>
@@ -40,7 +40,7 @@
 			</ul>
 			
 		</div>
-		<div class="col-md-10 col-sm-8 mt-3">
+		<div class="col-md-10 col-sm-10 mt-3">
 			<!-- create form -->
 			
 	
