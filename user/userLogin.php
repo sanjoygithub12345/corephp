@@ -1,7 +1,7 @@
 <?php
   include('../dbconection.php');
   session_start();
-  if(!isset($_SESSION['login'])){
+  if(!isset($_SESSION['ulogin'])){
   if(isset($_POST['login']))
   {
   	$email=$_POST['email'];
@@ -11,7 +11,7 @@
   	$result=mysqli_num_rows($res);
   	if($result ==1)
   	{
-  		$_SESSION['login']=true;
+  		$_SESSION['ulogin']=true;
   		$_SESSION['email']=$email;
   		
   	}

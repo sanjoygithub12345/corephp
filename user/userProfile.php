@@ -6,7 +6,7 @@ define('PAGE', 'userProfile' );
 include('../dbconection.php');
 
 session_start();
-if($_SESSION['login'])
+if($_SESSION['ulogin'])
 {
    $email=$_SESSION['email'];
 }

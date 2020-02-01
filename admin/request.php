@@ -57,19 +57,49 @@ else
    	if ($res) {
    	}
    }
+   if(isset($_POST['Assign']))
+   {
+   	$request_id=$_POST['id'];
+   	$requestinfo=$_POST['request_info'];
+   	$description=$_POST['description'];
+   	$name = $_POST['name'];
+   	$addressone = $_POST['address'];
+   	$addresstwo = $_POST['addressone'];
+   	$city= $_POST['city'];
+   	$state= $_POST['state'];
+   	$zip= $_POST['zip'];
+   	$email= $_POST['email'];
+   	$mobile=$_POST['number'];
+   	$date=$_POST['date'];
+   	$Technician=$_POST['Technician'];
+   	$sql="INSERT INTO assign_work (request_id,requestinfo,description,name,addressone,addresstwo,city,state,zip,email,mobile,datee,technician) VALUES (
+   	'$request_id','$requestinfo','$description','$name','$addressone','$addresstwo','$city','$state','$zip','$email','$mobile','$date','$Technician'
+   )";
+   $res= mysqli_query($db,$sql);
+   if($res)
+   {
+   	  $msg  ='<div class="alert alert-success">data submited</div>';
+   }
+   }
     ?>
 <div class=" col-md-6 mt-5 jumbotron ">
 
 	<h3 class="text-center mt-5 mb-2">Assign work order</h3>
+	   <?php 
+	   if(isset($msg))
+	   {
+	   	echo $msg;
+	   }
+	   ?>
    
 	  <form method="post">
 	 <div class="form-group">
  		 <label>ID</label>
- 		 <input type="text" name="request" class="form-control form-control-sm" value="<?php if(isset($fresult['id'])) echo $fresult['id'];  ?>">
+ 		 <input type="text" name="id" class="form-control form-control-sm" value="<?php if(isset($fresult['id'])) echo $fresult['id'];  ?>">
  	</div>
  	<div class="form-group">
  		 <label>requset info</label>
- 		 <input type="text" name="request" class="form-control form-control-sm" value="<?php if(isset($fresult['requestinfo'])) echo $fresult['requestinfo'];  ?>">
+ 		 <input type="text" name="request_info" class="form-control form-control-sm" value="<?php if(isset($fresult['requestinfo'])) echo $fresult['requestinfo'];  ?>">
  	</div>
  	<div class="form-group">
  		 <label>description</label>
@@ -154,7 +184,7 @@ else
  		</div>
 
  	</div>
- 	<input type="submit" value="Assign" name="submit" class="btn btn-primary mt-3 mb-3">
+ 	<input type="submit" value="Assign" name="Assign" class="btn btn-primary mt-3 mb-3">
 
  </form>	
 </div>

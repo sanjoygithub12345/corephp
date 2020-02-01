@@ -35,12 +35,12 @@
 				</li>
 					<li class="nav-item"><a href="userChangePassword.php" class="nav-link mr-2 pl-2 <?php if(PAGE=='userChangePassword'){echo 'act';} ?>"><i class="fas fa-key mr-2"></i> change password</a>
 				</li>
-					<li class="nav-item"><a href="../logout.php" class="nav-link mr-2 pl-2 "><i class="fas fa-sign-out-alt mr-2"></i>log out</a>
+					<li class="nav-item"><a href="log_out.php" class="nav-link mr-2 pl-2 "><i class="fas fa-sign-out-alt mr-2"></i>log out</a>
 				</li>
 			</ul>
 			
 		</div>
-		<div class="col-md-10 col-sm-10 mt-3">
+		
 			<!-- create form -->
 			
 	
