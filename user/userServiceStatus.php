@@ -2,6 +2,7 @@
 define('TITLE', 'user || checkStatus' );
 define('PAGE', 'userServiceStatus' );
 session_start();
+error_reporting(0);
 include('include/header.php');
 include('../dbconection.php');
 
@@ -29,9 +30,18 @@ include('../dbconection.php');
  if(isset($_POST['submit']))
  {
  	$id=$_POST['id'];
+ 	if ($id== "") {
+ 		echo '<div class="alert-danger alert mt-3">please set the id </div>';
+ 	    
+ 	}
+ 	else
+ 	{
+
  	$sql="SELECT * FROM assign_work WHERE request_id =' $id '";
  	$res = mysqli_query($db,$sql);
  	$result= mysqli_fetch_assoc($res);
+ 	if($id==$result['request_id'])
+ 	{
 
  ?>
  <table class="table table-bordered table-responsive mt-4">
@@ -68,7 +78,15 @@ include('../dbconection.php');
 
  	</tr>
  </table>
-<?php }?>
+<?php }
+else
+
+{
+	echo '<div class="alert alert-danger mt-3"> your request is pending</div>' ;
+}
+
+ ?>
+<?php }}?>
  </div>
 
  <?php

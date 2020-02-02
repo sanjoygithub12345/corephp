@@ -46,7 +46,7 @@ else
 		
 			<div class="mt-5 col-md-8 offset-md-2 ">
 				<p class="text-white bg-warning text-center">List of request</p>
-				<table class="table">
+				<table class="table table-bordered table-responsive">
 					<tr>
 						<th>Requester ID</th>
 						<th>Name</th>
@@ -67,7 +67,9 @@ else
 					 	<th><?php echo $result['email'] ?></th>
 
 					 </tr>
-			     <?php } ?>
+			    <?php 
+			       } 
+			 ?>
 
 				</table>
 			</div>
