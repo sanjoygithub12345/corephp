@@ -14,7 +14,9 @@ else
 {
 	header('location:userLogin.php');
 }
+?>
 
+<?php
 
 if(isset($_POST['submit']))
 {

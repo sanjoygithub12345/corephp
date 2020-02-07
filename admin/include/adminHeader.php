@@ -39,10 +39,8 @@
 
 				<li class="nav-item"><a href="requester.php" class="nav-link mr-2 pl-2 <?php if(PAGE=='requester'){echo 'act';} ?>"><i class="far fa-calendar-check mr-2"></i>requester</a>
 				</li>
-				<li class="nav-item"><a href="sell_request.php" class="nav-link mr-2 pl-2 <?php if(PAGE=='sell_request'){echo 'act';} ?>"><i class="far fa-calendar-check mr-2"></i>sell_request</a>
-				</li>
-				<li class="nav-item"><a href="work_repoart.php" class="nav-link mr-2 pl-2 <?php if(PAGE=='work_repoart'){echo 'act';} ?>"><i class="far fa-calendar-check mr-2"></i>work repoart</a>
-				</li>
+				
+				
 
 					<li class="nav-item"><a href="changepassword.php" class="nav-link mr-2 pl-2 <?php if(PAGE=='changepassword'){echo 'act';} ?>"><i class="fas fa-key mr-2"></i> change password</a>
 				</li>
