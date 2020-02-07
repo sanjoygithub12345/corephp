@@ -67,7 +67,7 @@ include('include/header.php');
 				<input type="submit" class="btn btn-primary" name="submit" value="update">
 			</form>
 			</div>
-			<p class="act">hello wrld </p>
+			
 			
 	<?php 
     include('include/footer.php');
