@@ -5,6 +5,6 @@
 	   				<input type="email" class="form-control" name="email" placeholder="email"><br>
 	   				<textarea class="form-control" name="message" placeholder="how can help you"></textarea>
 
-                  <input type="submit" name="submit" value="send" class="btn btn-primary mt-3">
+                  <input type="submit" name="" value="send" class="btn btn-primary mt-3">
 	   			</form>
 </div>
